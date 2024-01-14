@@ -26,4 +26,4 @@ bash run.sh
 
 ## Working
 
-This project as a parent-child process structure where the parent is the aggregator, and child is the client. The aggregator, when run spawns five instances of client processes, which are synchronized to start at the same tick of clock(upto microsecond accuracy). The client processes collect data from the binance socket independently 10 times, computes average, and sends the data to the server using a TCP stream opened at port 8080. Server, upon recieving the data, computes average of all the averages and displays on the terminal.
+This project has a parent-child process structure where the parent is the aggregator, and child is the client. The aggregator, when run spawns five instances of client processes, which are synchronized to start at the same tick of clock(upto microsecond accuracy). The client processes collect data from the binance socket independently 10 times, computes average, and sends the data to the server using a TCP stream opened at port 8080. Server, upon recieving the data, computes average of all the averages and displays on the terminal.
