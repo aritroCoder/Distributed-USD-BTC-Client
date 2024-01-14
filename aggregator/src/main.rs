@@ -11,12 +11,12 @@ fn main() {
     let start_time = chrono::Utc::now().timestamp() + 1; // Start in 1 second from now
 
     for _ in 0..5 {
-        let child = Command::new("./child")
+        let child = Command::new("./client")
             .arg(format!("--start={start_time}"))
             .arg("--mode=cache")
             .arg("--times=10")
             .spawn()
-            .expect("failed to execute child");
+            .expect("failed to execute client");
 
         child_handlers.push(child);
     }
