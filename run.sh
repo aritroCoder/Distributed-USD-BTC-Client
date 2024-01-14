@@ -1,5 +1,8 @@
 #!/bin/bash
-# This script is used to run the program
+if lsof -Pi :8080 -sTCP:LISTEN -t >/dev/null ; then
+    echo "Error: Port 8080 is already in use"
+    exit 1
+fi
 ROOT_DIR=$(pwd)
 cd $ROOT_DIR/client
 cargo build --release
