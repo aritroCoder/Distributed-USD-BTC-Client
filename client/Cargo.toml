@@ -1,0 +1,15 @@
+[package]
+name = "client"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tungstenite = {version = "0.16.0", features = ["native-tls"]}
+url = "2.2.2"
+clap = { version = "4.4.14", features = ["derive"] }
+serde = { version="1.0", features=["derive"] }
+serde_json = { version="1.0", features=["raw_value"] }
+uuid = { version = "1.6.1", features = ["v4", "fast-rng", "macro-diagnostics"] }
+chrono = "0.4.31"
